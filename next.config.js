@@ -2,12 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // Configure static file serving
-  output: 'standalone',
-  // Serve static files from the public directory
-  experimental: {
-    outputFileTracingRoot: '/',
+  // Simplified configuration for Vercel
+  output: 'export',
+  // Ensure static assets are properly handled
+  images: {
+    unoptimized: true,
   },
+  // Remove experimental options that might cause issues
 };
 
 module.exports = nextConfig;
