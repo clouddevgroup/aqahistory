@@ -2,24 +2,34 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // Simplified configuration for Vercel
-  output: 'export',
+  // Simplified configuration for Vercel - using standalone instead of export
+  // This allows API routes to work
+  output: 'standalone',
   // Ensure static assets are properly handled
   images: {
     unoptimized: true,
   },
   // Add trailingSlash for compatibility with static HTML
   trailingSlash: true,
-  // Ensure all HTML files are correctly exported
-  exportPathMap: async function (
-    defaultPathMap,
-    { dev, dir, outDir, distDir, buildId }
-  ) {
-    return {
-      '/': { page: '/' },
-      '/practice': { page: '/practice' },
-      '/topics': { page: '/topics' },
-    };
+  // Add redirects for common variations
+  async redirects() {
+    return [
+      {
+        source: '/practise',
+        destination: '/practice',
+        permanent: true,
+      },
+      {
+        source: '/practise.html',
+        destination: '/practice',
+        permanent: true,
+      },
+      {
+        source: '/practice.html',
+        destination: '/practice',
+        permanent: true,
+      },
+    ];
   },
 };
 
