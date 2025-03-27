@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Questions - AQA GCSE History Revision</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AQA GCSE History Revision</h1>
+            <h2>America 1920s-1950s</h2>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topics.html">Topics</a></li>
+                <li><a href="practice.html" class="active">Practice Questions</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="page-header">
+                <h2>Practice Questions</h2>
+                <p>Test your knowledge with these AQA GCSE-style questions and receive AI-powered feedback</p>
+            </section>
+
+            <section class="question-filters">
+                <div class="filter-container">
+                    <label for="topic-filter">Filter by Topic:</label>
+                    <select id="topic-filter">
+                        <option value="all">All Topics</option>
+                        <option value="boom">The Boom</option>
+                        <option value="depression">The Great Depression</option>
+                        <option value="new-deal">The New Deal</option>
+                        <option value="ww2">World War II</option>
+                        <option value="cold-war">The Cold War</option>
+                        <option value="space-race">The Space Race</option>
+                    </select>
+
+                    <label for="difficulty-filter">Difficulty Level:</label>
+                    <select id="difficulty-filter">
+                        <option value="all">All Levels</option>
+                        <option value="4">4 Marks</option>
+                        <option value="8">8 Marks</option>
+                        <option value="12">12 Marks</option>
+                        <option value="16">16 Marks</option>
+                    </select>
+                </div>
+                <div class="generate-container">
+                    <button id="generate-question" class="btn primary">Generate New Question</button>
+                </div>
+            </section>
+
+            <section id="questions-container">
+                <!-- Question 1 -->
+                <div class="question-container" data-topic="boom" data-marks="4">
+                    <div class="question">
+                        <div class="question-info">
+                            <span class="topic">The Boom</span>
+                            <span class="marks">4 Marks</span>
+                        </div>
+                        <h3>Source Analysis</h3>
+                        <p>Describe two ways in which the automobile industry contributed to the economic boom of the 1920s.</p>
+                        <textarea placeholder="Type your answer here..."></textarea>
+                        <button class="btn primary submit-answer">Submit Answer</button>
+                    </div>
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing your answer...</p>
+                    </div>
+                    <div class="feedback">
+                        <h4>Feedback</h4>
+                        <div class="score"></div>
+                        <div class="suggestions"></div>
+                        <div class="example-answer">
+                            <h4>Example Answer</h4>
+                            <div class="example-content"></div>
+                            <button class="btn secondary toggle-example">Show Example Answer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-container" data-topic="depression" data-marks="8">
+                    <div class="question">
+                        <div class="question-info">
+                            <span class="topic">The Great Depression</span>
+                            <span class="marks">8 Marks</span>
+                        </div>
+                        <h3>Explanation</h3>
+                        <p>Explain the key causes of the Wall Street Crash of 1929.</p>
+                        <textarea placeholder="Type your answer here..."></textarea>
+                        <button class="btn primary submit-answer">Submit Answer</button>
+                    </div>
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing your answer...</p>
+                    </div>
+                    <div class="feedback">
+                        <h4>Feedback</h4>
+                        <div class="score"></div>
+                        <div class="suggestions"></div>
+                        <div class="example-answer">
+                            <h4>Example Answer</h4>
+                            <div class="example-content"></div>
+                            <button class="btn secondary toggle-example">Show Example Answer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-container" data-topic="new-deal" data-marks="12">
+                    <div class="question">
+                        <div class="question-info">
+                            <span class="topic">The New Deal</span>
+                            <span class="marks">12 Marks</span>
+                        </div>
+                        <h3>Analysis</h3>
+                        <p>"The New Deal was successful in addressing the problems of the Great Depression." How far do you agree with this statement?</p>
+                        <textarea placeholder="Type your answer here..."></textarea>
+                        <button class="btn primary submit-answer">Submit Answer</button>
+                    </div>
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing your answer...</p>
+                    </div>
+                    <div class="feedback">
+                        <h4>Feedback</h4>
+                        <div class="score"></div>
+                        <div class="suggestions"></div>
+                        <div class="example-answer">
+                            <h4>Example Answer</h4>
+                            <div class="example-content"></div>
+                            <button class="btn secondary toggle-example">Show Example Answer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-container" data-topic="ww2" data-marks="16">
+                    <div class="question">
+                        <div class="question-info">
+                            <span class="topic">World War II</span>
+                            <span class="marks">16 Marks</span>
+                        </div>
+                        <h3>Essay</h3>
+                        <p>"The decision to drop atomic bombs on Hiroshima and Nagasaki was primarily motivated by the desire to end the war quickly and save American lives." How far do you agree with this interpretation?</p>
+                        <textarea placeholder="Type your answer here..."></textarea>
+                        <button class="btn primary submit-answer">Submit Answer</button>
+                    </div>
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing your answer...</p>
+                    </div>
+                    <div class="feedback">
+                        <h4>Feedback</h4>
+                        <div class="score"></div>
+                        <div class="suggestions"></div>
+                        <div class="example-answer">
+                            <h4>Example Answer</h4>
+                            <div class="example-content"></div>
+                            <button class="btn secondary toggle-example">Show Example Answer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-container" data-topic="cold-war" data-marks="8">
+                    <div class="question">
+                        <div class="question-info">
+                            <span class="topic">The Cold War</span>
+                            <span class="marks">8 Marks</span>
+                        </div>
+                        <h3>Explanation</h3>
+                        <p>Explain the significance of the Potsdam Conference in shaping early Cold War tensions.</p>
+                        <textarea placeholder="Type your answer here..."></textarea>
+                        <button class="btn primary submit-answer">Submit Answer</button>
+                    </div>
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing your answer...</p>
+                    </div>
+                    <div class="feedback">
+                        <h4>Feedback</h4>
+                        <div class="score"></div>
+                        <div class="suggestions"></div>
+                        <div class="example-answer">
+                            <h4>Example Answer</h4>
+                            <div class="example-content"></div>
+                            <button class="btn secondary toggle-example">Show Example Answer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-container" data-topic="cold-war" data-marks="12">
+                    <div class="question">
+                        <div class="question-info">
+                            <span class="topic">The Cold War</span>
+                            <span class="marks">12 Marks</span>
+                        </div>
+                        <h3>Analysis</h3>
+                        <p>"The Cuban Missile Crisis was the most dangerous moment of the Cold War." How far do you agree with this statement?</p>
+                        <textarea placeholder="Type your answer here..."></textarea>
+                        <button class="btn primary submit-answer">Submit Answer</button>
+                    </div>
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing your answer...</p>
+                    </div>
+                    <div class="feedback">
+                        <h4>Feedback</h4>
+                        <div class="score"></div>
+                        <div class="suggestions"></div>
+                        <div class="example-answer">
+                            <h4>Example Answer</h4>
+                            <div class="example-content"></div>
+                            <button class="btn secondary toggle-example">Show Example Answer</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-container" data-topic="space-race" data-marks="8">
+                    <div class="question">
+                        <div class="question-info">
+                            <span class="topic">The Space Race</span>
+                            <span class="marks">8 Marks</span>
+                        </div>
+                        <h3>Explanation</h3>
+                        <p>Explain how the Space Race reflected Cold War tensions between the USA and USSR.</p>
+                        <textarea placeholder="Type your answer here..."></textarea>
+                        <button class="btn primary submit-answer">Submit Answer</button>
+                    </div>
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Analyzing your answer...</p>
+                    </div>
+                    <div class="feedback">
+                        <h4>Feedback</h4>
+                        <div class="score"></div>
+                        <div class="suggestions"></div>
+                        <div class="example-answer">
+                            <h4>Example Answer</h4>
+                            <div class="example-content"></div>
+                            <button class="btn secondary toggle-example">Show Example Answer</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AQA GCSE History Revision. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/practice.js"></script>
+</body>
+</html>
