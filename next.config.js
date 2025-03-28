@@ -110,6 +110,18 @@ const nextConfig = {
         source: '/topics/space-race/',
         destination: '/public/topics/space-race.html',
       },
+      {
+        source: '/topics/ww2-interactive-quiz',
+        destination: '/pages/topics/ww2-interactive-quiz',
+      },
+      {
+        source: '/topics/ww2-timeline',
+        destination: '/pages/topics/ww2-timeline',
+      },
+      {
+        source: '/topics/ww2-key-figures',
+        destination: '/pages/topics/ww2-key-figures',
+      },
       // Add rewrites for static assets to ensure they're accessible from subpaths
       {
         source: '/practice/css/:path*',
