@@ -61,12 +61,21 @@ const nextConfig = {
         source: '/privacy',
         destination: '/public/privacy.html',
       },
+      // Handle both with and without trailing slash for topic pages
       {
         source: '/topics/boom',
         destination: '/public/topics/boom.html',
       },
       {
+        source: '/topics/boom/',
+        destination: '/public/topics/boom.html',
+      },
+      {
         source: '/topics/depression',
+        destination: '/public/topics/depression.html',
+      },
+      {
+        source: '/topics/depression/',
         destination: '/public/topics/depression.html',
       },
       // Add rewrites for static assets to ensure they're accessible from subpaths

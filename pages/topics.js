@@ -43,8 +43,8 @@ export async function getStaticProps() {
     html = html.replace(/href="privacy.html"/g, 'href="/privacy"');
     
     // Fix topic links
-    html = html.replace(/href="topics\/boom.html"/g, 'href="/topics/boom"');
-    html = html.replace(/href="topics\/depression.html"/g, 'href="/topics/depression"');
+    html = html.replace(/href="topics\/boom.html"/g, 'href="/topics/boom/"');
+    html = html.replace(/href="topics\/depression.html"/g, 'href="/topics/depression/"');
     
     return {
       props: {
