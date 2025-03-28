@@ -78,6 +78,38 @@ const nextConfig = {
         source: '/topics/depression/',
         destination: '/public/topics/depression.html',
       },
+      {
+        source: '/topics/new-deal',
+        destination: '/public/topics/new-deal.html',
+      },
+      {
+        source: '/topics/new-deal/',
+        destination: '/public/topics/new-deal.html',
+      },
+      {
+        source: '/topics/ww2',
+        destination: '/public/topics/ww2.html',
+      },
+      {
+        source: '/topics/ww2/',
+        destination: '/public/topics/ww2.html',
+      },
+      {
+        source: '/topics/cold-war',
+        destination: '/public/topics/cold-war.html',
+      },
+      {
+        source: '/topics/cold-war/',
+        destination: '/public/topics/cold-war.html',
+      },
+      {
+        source: '/topics/space-race',
+        destination: '/public/topics/space-race.html',
+      },
+      {
+        source: '/topics/space-race/',
+        destination: '/public/topics/space-race.html',
+      },
       // Add rewrites for static assets to ensure they're accessible from subpaths
       {
         source: '/practice/css/:path*',
