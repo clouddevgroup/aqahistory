@@ -61,6 +61,39 @@ const nextConfig = {
         source: '/privacy',
         destination: '/public/privacy.html',
       },
+      {
+        source: '/topics/boom',
+        destination: '/public/topics/boom.html',
+      },
+      {
+        source: '/topics/depression',
+        destination: '/public/topics/depression.html',
+      },
+      // Add rewrites for static assets to ensure they're accessible from subpaths
+      {
+        source: '/practice/css/:path*',
+        destination: '/css/:path*',
+      },
+      {
+        source: '/practice/js/:path*',
+        destination: '/js/:path*',
+      },
+      {
+        source: '/practice/images/:path*',
+        destination: '/images/:path*',
+      },
+      {
+        source: '/topics/css/:path*',
+        destination: '/css/:path*',
+      },
+      {
+        source: '/topics/js/:path*',
+        destination: '/js/:path*',
+      },
+      {
+        source: '/topics/images/:path*',
+        destination: '/images/:path*',
+      },
     ];
   },
 };

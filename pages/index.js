@@ -28,6 +28,20 @@ export async function getStaticProps() {
     html = html.replace(/<head>[\s\S]*?<\/head>/, '');
     html = html.replace(/<script[\s\S]*?<\/script>/g, '');
     
+    // Fix all relative links in the HTML
+    html = html.replace(/href="css\//g, 'href="/css/');
+    html = html.replace(/src="js\//g, 'src="/js/');
+    html = html.replace(/href="images\//g, 'href="/images/');
+    html = html.replace(/src="images\//g, 'src="/images/');
+    
+    // Fix navigation links
+    html = html.replace(/href="index.html"/g, 'href="/"');
+    html = html.replace(/href="practice.html"/g, 'href="/practice"');
+    html = html.replace(/href="topics.html"/g, 'href="/topics"');
+    html = html.replace(/href="about.html"/g, 'href="/about"');
+    html = html.replace(/href="contact.html"/g, 'href="/contact"');
+    html = html.replace(/href="privacy.html"/g, 'href="/privacy"');
+    
     return {
       props: {
         html,
