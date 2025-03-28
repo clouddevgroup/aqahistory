@@ -1,10 +1,21 @@
 import fs from 'fs';
 import path from 'path';
+import Head from 'next/head';
 
 export default function Practice({ html }) {
-  // Render the HTML content directly
+  // Fix relative paths in HTML by using the corrected HTML
   return (
-    <div dangerouslySetInnerHTML={{ __html: html }} />
+    <>
+      <Head>
+        <title>Practice Questions - AQA GCSE History Revision</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <script src="/js/main.js" defer></script>
+        <script src="/js/practice.js" defer></script>
+      </Head>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </>
   );
 }
 
@@ -12,7 +23,11 @@ export default function Practice({ html }) {
 export async function getStaticProps() {
   try {
     const filePath = path.join(process.cwd(), 'public', 'practice.html');
-    const html = fs.readFileSync(filePath, 'utf8');
+    let html = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove the head section and scripts at the end to avoid duplicates
+    html = html.replace(/<head>[\s\S]*?<\/head>/, '');
+    html = html.replace(/<script[\s\S]*?<\/script>/g, '');
     
     return {
       props: {

@@ -11,7 +11,7 @@ const nextConfig = {
   },
   // Add trailingSlash for compatibility with static HTML
   trailingSlash: true,
-  // Add redirects for common variations
+  // Add redirects for common variations and fix HTML links
   async redirects() {
     return [
       {
@@ -28,6 +28,38 @@ const nextConfig = {
         source: '/practice.html',
         destination: '/practice',
         permanent: true,
+      },
+      {
+        source: '/topics.html',
+        destination: '/topics',
+        permanent: true,
+      },
+      {
+        source: '/index.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/about.html',
+        destination: '/about',
+        permanent: true,
+      },
+    ];
+  },
+  // Fix internal navigation between pages
+  async rewrites() {
+    return [
+      {
+        source: '/about',
+        destination: '/public/about.html',
+      },
+      {
+        source: '/contact',
+        destination: '/public/contact.html',
+      },
+      {
+        source: '/privacy',
+        destination: '/public/privacy.html',
       },
     ];
   },
